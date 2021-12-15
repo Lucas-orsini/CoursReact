@@ -14,3 +14,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+}

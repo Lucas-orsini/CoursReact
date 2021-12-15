@@ -78,7 +78,14 @@ settodoList(prevArray => [...todolist, todoAdd]);
             )
           })
         )}
-        <Card title="okokok" desc="description" image="https://images.unsplash.com/photo-1639108436992-11cc4850c965?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" price="30"/>
+        <div className="card-container">
+        <Card title="Titre1" desc="description" image="https://images.unsplash.com/photo-1639108436992-11cc4850c965?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" price="30"/>
+        <Card title="Titre2" desc="description2" image="https://images.unsplash.com/photo-1639108436992-11cc4850c965?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" price="10"/>
+        <Card title="Titre3" desc="description3" image="https://images.unsplash.com/photo-1639108436992-11cc4850c965?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" price="20"/>
+        <Card title="Titre4" desc="description4" image="https://images.unsplash.com/photo-1639108436992-11cc4850c965?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" price="50"/>
+        <Card title="Titre5" desc="description5" image="https://images.unsplash.com/photo-1639108436992-11cc4850c965?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" price="40"/>
+        <Card title="Titre6" desc="description6" image="https://images.unsplash.com/photo-1639108436992-11cc4850c965?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" price="25"/>
+        </div>
       </main>
     </div>
   )
