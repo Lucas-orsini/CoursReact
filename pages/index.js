@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import React, { useState }from 'react'
+import React, {useEffect, useState }from 'react'
+import Card from '../components/Card'
 
 export default function Home() {
   const [count, setCount] = useState(0)
   const [todolist, settodoList] = useState([])
   const [todoAdd, setTodoAdd] = useState("")
-  const [disabled, setDisabled] = useState(true);
   const [editableTodo, setEditableTodo] = useState("");
+  const [color, setColor] = useState("blue");
 
 
  const handlePush = event  =>{
@@ -30,6 +31,23 @@ settodoList(prevArray => [...todolist, todoAdd]);
       newTodoList[editableTodo] = event.target.value
       settodoList(newTodoList)
     }
+
+
+    useEffect(()=> {
+      console.log("modification")
+    }, [todolist]);
+
+    useEffect(()=> {
+      count>0 && setColor('red')
+    }, [count]);
+
+    useEffect(()=> {
+      localStorage.setItem("todos", todolist)
+      return () =>{
+        localStorage.clear()
+      }
+    }, [todolist]);
+
 
   return (
     <div className={styles.container}>
@@ -60,7 +78,7 @@ settodoList(prevArray => [...todolist, todoAdd]);
             )
           })
         )}
-        
+        <Card title="okokok" desc="description" image="https://images.unsplash.com/photo-1639108436992-11cc4850c965?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" price="30"/>
       </main>
     </div>
   )
